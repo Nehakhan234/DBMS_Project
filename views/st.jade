@@ -1,0 +1,74 @@
+doctype html
+html
+  head
+    title Add Staff details
+  body
+    form(action='http://127.0.0.1:6060/xyz', method='get')
+      style.
+        body {
+        background-color: gray;
+        }
+        h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 35px;
+        text-align: left;
+        color: black;
+        text-align: center;
+        }
+        h2 {
+        color: whitesmoke;
+        font-size: 30px;
+        text-align: center;
+        font-style: italic;
+        }
+        label {
+        color: black;
+        font-size: 25px;
+        }
+        input[type=submit] {
+        color: whitesmoke;
+        width: 150px;
+        height: 50px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        background-color: black;
+        }
+        form {
+        text-align: center;
+        }
+      body
+        h1 Enter Staff Details
+        form
+          label Name:
+          input(type='text', name='name')
+          br
+          br
+          label Contact no:
+          input(type='number', name='contact_no')
+          br
+          br
+          label Date of Birth:
+          input(type='date', name='date')
+          br
+          br
+          label Gender:
+          input(type='text', name='gender')
+          br
+          br
+          label Address:
+          textarea(name='Address')  
+          br
+          br
+          label Designation:
+          input(type='text', name='post')
+          br
+          br
+          label Salary:
+          input(type='number', name='salary')
+          br
+          br
+          br
+          br
+          br
+          br
+          input(type='submit', value='submit', item-width='20px')

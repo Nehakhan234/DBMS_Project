@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+  title=title
+  style.
+    body{   
+            background-color:black;
+            font-size:20px;
+            color:white;
+       }
+    h1{   
+          text-align:center;
+          font-size:30px;
+      }    
+
+  body
+    h1 Feedback! 
+    table(border='3' align='center')
+      thead
+       tr
+         th Customer Name
+         th Contact no
+         th Survey Date
+         th Employee Performance
+         th Food Quality
+         th Customer Satisfaction
+         th Overall Rating
+      tbody
+      -each item in userresults
+        tr
+          td=item.c_name
+          td=item.contact_no
+          td=`${item.Survey_date.getDate()}/${1+item.Survey_date.getMonth()}/${item.Survey_date.getYear()+1900}`
+          td=item.Emp_performance
+          td=item.food_quality
+          td=item.customer_satisfaction
+          td=item.overall_rating
+
+
+  

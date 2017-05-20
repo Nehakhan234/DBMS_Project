@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    title FeedBack Form
+    style.
+      form {
+      text-align: center;
+      }
+      p {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+      }
+      label {
+      color: black;
+      font-size: 20px;
+      }
+      body {
+      background-image: url('Images/feed.jpg');
+      }
+      h2 {
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 30px;
+      color: black;
+      font-style: italic;
+      }
+      button {
+      color: black;
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+      background-color: rosybrown;
+      }
+  body
+    br
+    br
+    br
+    br
+    h2 “Feedback is the breakfast of champions”
+    br
+    form(action='http://127.0.0.1:6060/feed', method='GET')
+      label Name:
+      input(type='text', name='name')
+      br
+      br
+      label Contact no:
+      input(type='number', name='contact')
+      br
+      br
+      label Date:
+      input(type='date', name='date')
+      br
+      br
+      p -----Rate Out Of 10-----
+      br
+      label Employee Performance:
+      input(type='number', name='emp')
+      br
+      br
+      label Food Quality:
+      input(type='number', name='quality')
+      br
+      br
+      label Customer Satisfaction:
+      input(type='number', name='satisfac')
+      br
+      br
+      label Overall Rating
+      input(type='number', name='overall')
+      br
+      br
+      button(type='submit', item-width='200px')  SUBMIT  

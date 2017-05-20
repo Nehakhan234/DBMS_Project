@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+  title=title
+  style.
+    body{   
+            background-color:black;
+            font-size:20px;
+            color:white;
+       }
+    h1{   
+          text-align:center;
+          font-size:30px;
+      }    
+
+  body
+    h1 Order Details! 
+    table(border='3' align='center')
+      thead
+       tr
+         th Customer ID
+         th First Name
+         th Last Name
+         th Delivery Address
+         th Contact No
+         th Order Date
+         th List of Items
+         th Quantity
+      tbody
+      -each item in userresults
+        tr
+          td=item.c_id
+          td=item.first_name
+          td=item.last_name
+          td=item.Delivery_address
+          td=item.contact_no 
+          td=`${item.Order_date.getDate()}/${1+item.Order_date.getMonth()}/${item.Order_date.getYear()+1900}`
+          td=item.Items
+          td=item.Quantity  

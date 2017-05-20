@@ -1,0 +1,227 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    style.
+      * {
+      box-sizing: border-box
+      }
+      body {
+      font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+      display: none
+      }
+      .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      }
+      .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      }
+      .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      }
+      .dot {
+      height: 13px;
+      width: 13px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+      .active {
+      background-color: #717171;
+      }
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+      from {
+      opacity: .4
+      }
+      to {
+      opacity: 1
+      }
+      }
+      @keyframes fade {
+      from {
+      opacity: .4
+      }
+      to {
+      opacity: 1
+      }
+      }
+      @media only screen and (max-width: 300px) {
+      .text {
+      font-size: 11px
+      }
+      }
+      body {
+      background-color: black;
+      }
+      h1 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 30px;
+      text-align: right;
+      font-style: italic;
+      color: whitesmoke;
+      }
+      h2 {
+      color: whitesmoke;
+      font-size: 30px;
+      text-align: center;
+      font-style: italic;
+      }
+      label {
+      color: black;
+      font-size: 25px;
+      }
+      input[type=submit] {
+      color: wheat;
+      width: 150px;
+      height: 50px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      background-color: black;
+      }
+      button {
+      float: right;
+      color: wheat;
+      width: 150px;
+      height: 50px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      background-color: black;
+      }
+      form {
+      text-align: center;
+      }
+  body(background='Images/welcome2.jpg', width='1400', height='300')
+    .slideshow-container
+      .mySlides.fade
+        .numbertext 1 
+        img(src='Images/welcome.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 2 
+        img(src='Images/b.jpeg', style='width:100%')
+      .mySlides.fade
+        .numbertext 3 
+        img(src='Images/d.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 4 
+        img(src='Images/e.jpg', stylstyle='width:100%')
+      .mySlides.fade
+        .numbertext 5 
+        img(src='Images/f.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 6 
+        img(src='Images/g.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 7 
+        img(src='Images/p.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 8 
+        img(src='Images/i.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 9 
+        img(src='Images/j.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 10 
+        img(src='Images/k.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 11 
+        img(src='Images/l.jpg', style='width:100%')
+      .mySlides.fade
+        .numbertext 12 
+        img(src='Images/t.jpg', style='width:100%')
+    br
+    div(style='text-align:center')
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+      span.dot
+    br
+    br
+    br
+    form(action='http://127.0.0.1:6060/Order', method='GET')
+      label First name:
+      input(type='text', name='firstname')
+      br
+      label Last name:
+      input(type='text', name='lastname')
+      br
+      br
+      label Delivery Address:
+      textarea(name='Address')  
+      br
+      br
+      label Contact no:
+      input(type='number', name='contact_no')
+      br
+      br
+      label Date:
+      input(type='date', name='date')
+      br
+      br
+      label Items:
+      textarea(name='items')
+      br
+      br
+      label Quantity:
+      input(type='number',name='quan')
+      br
+      br
+      br
+      br
+      input(type='submit', value='ORDER', item-width='20px')
+      br
+      br
+      br
+    form(action='http://127.0.0.1:6060/menu', method='GET')
+      button(type='submit', item-width='200px')  MENU   
+    h1  Steal Your Meal. . . .
+    script.
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+      slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2500);
+      }

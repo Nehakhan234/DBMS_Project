@@ -82,8 +82,18 @@ app.get('/login', function(req, res) {
 
 });
 
-app.post('/staff', function(req, res) {
-    res.render('staff');
+app.post('/staff', urlencodedParser, function(req, res) {
+    var username = "zohra";
+    var passwd = "123";
+    var psw = [req.body.psw];
+    var uname = [req.body.uname];
+
+    if ((psw == passwd) && (uname == username)) {
+        res.render('staff');
+    } else {
+        res.sendFile(__dirname + "/" + "p.htm");
+        console.log("wrong password");
+    }
 
 });
 
